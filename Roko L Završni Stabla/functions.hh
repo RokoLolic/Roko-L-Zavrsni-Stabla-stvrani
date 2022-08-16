@@ -22,22 +22,21 @@ public:
 	string stringkey;
 	int keymode;
 	binarynode(int = 0, string = "", int = 1); //create new binary node
-	
 	int binarysearch(int = 0, string = "", int =1);
 	int binarysearchint(int);
 	int binarysearchstring(string);
 
-	int binaryread(); //print out the content of node
+	int binaryread(); //print out the content of node	
 	int binarychecktype(binarypointer);
 
-	int binaryinsert(binarypointer); //instert current node into the root of another node, use binaryinsertstring/int depending on keymode
+	int binaryinsert(binarypointer); //instert current node into the root of another node, use 
+									//binaryinsertstring/int depending on keymode
 	binarypointer binaryinsertstring(binarypointer); //if strings
 	binarypointer binaryinsertint(binarypointer); //if integers
 
 	int binarydelete(int = 0, string = "", int = 1); //destroy the node of that value and rearange other nodes
 	binarypointer binarydeleteint(int);
 	binarypointer binarydeletestring(string);
-
 
 	int printinorder();
 	 // for avl tree

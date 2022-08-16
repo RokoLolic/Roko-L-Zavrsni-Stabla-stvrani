@@ -154,7 +154,7 @@ binarypointer binarynode::binarydeleteint(int value) {
 	else if (value > this->numberkey)
 		this->rightchild = this->rightchild->binarydeleteint(value);
 
-	// if key is same as this's key, then This is the node
+	// if key is same as this's ke	y, then This is the node
 	// to be deleted
 	else {
 		// node has no child
@@ -173,19 +173,13 @@ binarypointer binarynode::binarydeleteint(int value) {
 			free(this);
 			return temp;
 		}
-
 		// node with two children: Get the inorder successor
 		// (smallest in the right subtree)
 		binarypointer temp = minvaluenode(this->rightchild);
-
 		// Copy the inorder successor's content to this node
 		this->numberkey = temp->numberkey;
-
 		// Delete the inorder successor
-		
 		this->rightchild->binarydeleteint(temp->numberkey);
-
-		//free(temp);
 	}
 	return this;
 }
@@ -231,7 +225,7 @@ int binarynode::binarysearchint(int value) {
 	else {
 		cout << "Nağen je broj" << value << endl;
 		return 0;
-	}
+	}	
 }
 int binarynode::binarysearchstring(string word) {
 	cout << this->stringkey << endl;
